@@ -16,6 +16,7 @@ def merge_excels(file_paths, output_path, merge_by="rows", sheet_name=None):
     """
     dfs = []
     for fp in file_paths:
+        
         try:
             # 读取 Excel 文件，获取第一个 sheet
             data = pd.read_excel(fp, sheet_name=sheet_name, engine="openpyxl")
